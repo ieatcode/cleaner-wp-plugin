@@ -1,0 +1,107 @@
+.profile-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-top: 20px;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  input[type="text"], input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #0073aa;
+    outline: none;
+  }
+
+  #add-profile-btn {
+    background-color: #11aa00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #005177;
+    }
+  }
+}
+
+/* Container with grid display */
+.profiles-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px 0;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns on tablets */
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  /* Cards styling */
+  .profile-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+
+    .delete-profile {
+      background-color: red;
+      border: none;
+      color: #fff;
+    }
+
+    img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .rating-review {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .star {
+      color: #ffd700; /* gold color for stars */
+      font-size: 1.2em;
+    }
+  }
+
+
+}
+
+
+
