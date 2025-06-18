@@ -44,3 +44,35 @@ Shortcode to display a profile card:
 ### Notes
 - Profiles are stored in the WordPress options table; data persists across updates.
 - For best results, style the profile cards using the provided CSS classes.
+
+
+---
+## Testing 
+
+### Unit Tests
+
+This plugin includes PHPUnit tests to help ensure code quality and functionality.
+
+### Prerequisites
+- PHP 8.0 or higher
+- Composer (for managing dependencies)
+- PHPUnit (installed via Composer)
+
+### Setup
+
+- **Install PHPUnit via Composer**
+
+Navigate to your plugin root directory and run:
+
+```bash
+composer require --dev phpunit/phpunit ^10
+```
+
+### Run Tests
+Execute the tests with:
+```bash
+vendor/bin/phpunit
+```
+
+### Notes
+- Tests are located in the /tests directory.
